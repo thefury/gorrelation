@@ -1,6 +1,0 @@
-language: go
-before_install:
-    - go get github.com/thefury/gorrelation
-go:
-    - "1.10"
-script: go test
