@@ -8,6 +8,12 @@ import (
 	"testing"
 )
 
+func TestConstruction(t *testing.T) {
+	g := New()
+
+	assert.Equal(t, "", g.Value)
+}
+
 func TestAddCorrelationId(t *testing.T) {
 	g := New()
 
