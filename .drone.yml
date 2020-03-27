@@ -1,19 +1,9 @@
-workspace:
-  base: /go
-  path: src/github.com/thefury/gorrelation
+kind: pipeline
+name: default
 
-pipeline:
-  build:
-    image: golang:${GO_VERSION}
+steps:
+  - name: unit test
+    image: golang
     commands:
       - go get
       - go test
-
-matrix:
-  GO_VERSION:
-    - latest
-    - 1.9
-    - 1.8
-    - 1.7
-    - 1.6
-
